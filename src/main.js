@@ -1,6 +1,6 @@
 
 function imgDetail() {
-    const thumnails = document.getElementsByClassName("thumnail")
+    const thumbnails = document.getElementsByClassName("thumbnail")
     const popup = document.getElementById("imgPop")
     const popBackground = document.getElementById("popBackground")
     const grid = document.getElementById("grid")
@@ -28,14 +28,14 @@ function imgDetail() {
     })
 
     //각 썸네일에 이벤트 추가하는 부분 (클로저 문제로 for문 내부에 익명함수로 처리)
-    for (var thumnail of thumnails) {
-        (function (thum) {
-            thum.addEventListener("click", () => {
+    for (var thumbnail of thumbnails) {
+        (function (thumb) {
+            thumb.addEventListener("click", () => {
                 
-                image.setAttribute("src", thum.src)
+                image.setAttribute("src", thumb.src)
                 popup.style.display = "block"
             })
-        })(thumnail)
+        })(thumbnail)
 
     }
 
@@ -124,28 +124,28 @@ function search(text) {
         }
     }
 
-    initThumnails()
+    initThumbnails()
     highlight(tmp)
 }
 
 //특정 썸네일에 하이라이트
 function highlight(list){
-    const thumnails = document.getElementsByClassName("thumnail")
-    for(var t of thumnails){
+    const thumbnails = document.getElementsByClassName("thumbnail")
+    for(var t of thumbnails){
         t.style.opacity = "60%"
     }
     for(var i of list){
         console.log(i)
-        thumnails[i].style.boxShadow = "1px 1px 10px 1px #eafa8f"
-        thumnails[i].style.opacity = "100%"
-        //thumnails[i].animation = "first-animation 0.5s infinite alternate";
+        thumbnails[i].style.boxShadow = "1px 1px 10px 1px #eafa8f"
+        thumbnails[i].style.opacity = "100%"
+        //thumbnails[i].animation = "first-animation 0.5s infinite alternate";
     }
 }
 
 //썸네일 초기화
-function initThumnails(){
-    const thumnails = document.getElementsByClassName("thumnail")
-    for(var t of thumnails){
+function initThumbnails(){
+    const thumbnails = document.getElementsByClassName("thumbnail")
+    for(var t of thumbnails){
         t.style.opacity = "100%"
         t.style.boxShadow = "none"
     }
@@ -162,7 +162,7 @@ function searchInit(){
     })
 
     initBtn.addEventListener("click", function () {
-        initThumnails()
+        initThumbnails()
     })
 
     document.addEventListener("keydown", function (e) {
@@ -176,7 +176,7 @@ function searchInit(){
         }
         else if(e.key == "Escape"){
             searchTxt.value = ""
-            initThumnails()
+            initThumbnails()
         }
     })
 
