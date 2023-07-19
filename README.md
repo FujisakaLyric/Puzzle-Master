@@ -1,6 +1,7 @@
 # Puzzle-Master
 Main Page
-![Main](/doc/mini.jpg)  
+
+![Main](/doc/mini.jpg)
 
 Click on the thumbnail to expand the image.
 ![imgPop](/doc/imgPop.jpg)
