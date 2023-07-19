@@ -1,15 +1,12 @@
 # Puzzle-Master
-퍼즐마스터 이벤트 도움 사이트
-
+Main Page
 ![Main](/doc/mini.jpg)  
-메인화면  
 
-![imgPop](/doc/imgPop.jpg)  
-썸네일을 클릭하면 요렇게 됩니다.  
+Click on the thumbnail to expand the image.
+![imgPop](/doc/imgPop.jpg)
 
-![imgGrid](/doc/imgGrid.jpg)  
-이미지를 클릭하면 격자가 생깁니다.  
+Click on the expanded image to bring up gridlines.
+![imgGrid](/doc/imgGrid.jpg)
 
-![searched](/doc/searched.png)  
-검색어를 입력하면 결과가 나옵니다.   
-
+Enter a search term and matched results will be highlighted.
+![searched](/doc/searched.png)
